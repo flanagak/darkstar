@@ -67,6 +67,9 @@ local function CharCreate(player)
     if nation == raceInfo.homeNation and not player:hasItem(nationInfo.ring) then
         player:addItem(nationInfo.ring)
     end
+    -- add Flanahome starting gear
+    player:addItem(27556) -- Echad Ring
+    player:addItem(28540) -- Warp Ring
 
     -- unlock advanced jobs
     if ADVANCED_JOB_LEVEL == 0 then

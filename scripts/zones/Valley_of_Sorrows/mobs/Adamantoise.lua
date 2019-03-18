@@ -45,4 +45,8 @@ function onMobDespawn(mob)
             SetServerVariable("[PH]Aspidochelone", kills + 1)
         end
     end
+    -- Respawn Adamantoise QM
+    if LandKingSystem_NQ ~= 0 or LandKingSystem_HQ ~= 0 then
+        GetNPCByID(ID.npc.ADAMANTOISE_QM):setStatus(dsp.status.NORMAL)
+    end
 end

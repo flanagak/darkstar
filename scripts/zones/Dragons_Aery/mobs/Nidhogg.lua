@@ -54,4 +54,8 @@ function onMobDespawn(mob)
         UpdateNMSpawnPoint(ID.mob.FAFNIR)
         GetMobByID(ID.mob.FAFNIR):setRespawnTime(75600 + math.random(0, 6) * 1800) -- 21 - 24 hours with half hour windows
     end
+    -- Respawn Fafnir QM
+    if LandKingSystem_NQ ~= 0 or LandKingSystem_HQ ~= 0 then
+        GetNPCByID(ID.npc.FAFNIR_QM):setStatus(dsp.status.NORMAL)
+    end
 end

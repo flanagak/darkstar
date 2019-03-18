@@ -330,9 +330,9 @@ function onTrigger(player,npc)
         -- if player is waiting for an upgraded af or relic
         if afUpgrade > 0 then
             arg3 = afUpgrade
-            if player:getVar("AFupgradeDay") > os.time() then
-                arg4 = afUpgrade
-            end
+            --if player:getVar("AFupgradeDay") > os.time() then
+            --    arg4 = afUpgrade
+            --end
         end
 
         -- calculate cosmocleanse parameters
