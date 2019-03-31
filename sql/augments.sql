@@ -80,8 +80,8 @@ INSERT INTO `augments` VALUES (45, 0, 366, 1, 0, 0); -- DMG:+1 (melee, not range
 INSERT INTO `augments` VALUES (46, 0, 366, -1, 0, 0); -- DMG:-1 (melee, not ranged...Mainhand only?)
 INSERT INTO `augments` VALUES (47, 0, 380, 1, 0, 0); -- Delay:+1% (melee, not ranged)
 INSERT INTO `augments` VALUES (48, 0, 380, -1, 0, 0); -- Delay:-1% (melee, not ranged)
-INSERT INTO `augments` VALUES (49, 0, 384, 100, 0, 0); -- Haste+1
-INSERT INTO `augments` VALUES (50, 0, 384, -100, 0, 0); -- Slow+1
+INSERT INTO `augments` VALUES (49, 100, 384, 1, 0, 0); -- Haste+1
+INSERT INTO `augments` VALUES (50, 100, 384, -1, 0, 0); -- Slow+1
 INSERT INTO `augments` VALUES (51, 0, 72, 1, 0, 0); -- HP recovered while healing+1
 INSERT INTO `augments` VALUES (52, 0, 71, 1, 0, 0); -- MP recovered while healing+1
 INSERT INTO `augments` VALUES (53, 0, 168, -1, 0, 0); -- Spell interruption rate down 1%
@@ -200,7 +200,7 @@ INSERT INTO `augments` VALUES (144, 0, 302, 1, 0, 0); -- Triple Atk.+1
 INSERT INTO `augments` VALUES (145, 0, 291, 1, 0, 0); -- Counter+1
 INSERT INTO `augments` VALUES (146, 0, 259, 1, 0, 0); -- Dual Wield+1
 INSERT INTO `augments` VALUES (147, 0, 303, 1, 0, 0); -- Treasure Hunter+1
-INSERT INTO `augments` VALUES (148, 0, 0, 0, 0, 0); -- Gilfinder+1
+INSERT INTO `augments` VALUES (148, 0, 897, 1, 0, 0); -- Gilfinder+1
 INSERT INTO `augments` VALUES (149, 0, 0, 0, 0, 0); -- 149 currently unused. Leave at zero. Edit+move or remove this note as new augments get discovered.
 INSERT INTO `augments` VALUES (150, 0, 0, 0, 0, 0); -- 150 currently unused. Leave at zero. Edit+move or remove this note as new augments get discovered.
 INSERT INTO `augments` VALUES (151, 0, 173, 1, 0, 0); -- Martial Arts+1
@@ -403,23 +403,23 @@ INSERT INTO `augments` VALUES (319, 0, 0, 0, 0, 0);
 INSERT INTO `augments` VALUES (320, 0, 357, -1, 0, 0); -- Blood Pact ability delay -1
 INSERT INTO `augments` VALUES (321, 0, 346, -1, 0, 0); -- Avatar perpetuation cost -1
 INSERT INTO `augments` VALUES (322, 0, 455, -1, 0, 0); -- Song spellcasting time -1%
-INSERT INTO `augments` VALUES (323, 0, 0, 0, 0, 0); -- Cure spellcasting time -1%
+INSERT INTO `augments` VALUES (323, 0, 519, -1, 0, 0); -- Cure spellcasting time -1%
 INSERT INTO `augments` VALUES (324, 0, 0, 0, 0, 0); -- Call Beast ability delay -1
 INSERT INTO `augments` VALUES (325, 0, 0, 0, 0, 0); -- Quick Draw ability delay -1
 INSERT INTO `augments` VALUES (326, 0, 48, 1, 0, 0); -- Weapon Skill Acc.+1
-INSERT INTO `augments` VALUES (327, 0, 0, 0, 0, 0); -- Weapon skill damage+1%
+INSERT INTO `augments` VALUES (327, 0, 840, 1, 0, 0); -- Weapon skill damage+1%
 INSERT INTO `augments` VALUES (328, 0, 421, 1, 0, 0); -- Crit. hit damage+1%
 INSERT INTO `augments` VALUES (329, 0, 374, 1, 0, 0); -- Cure potency+1%
 INSERT INTO `augments` VALUES (330, 0, 491, 1, 0, 0); -- Waltz potency+1%
 INSERT INTO `augments` VALUES (331, 0, 497, -1, 0, 0); -- Waltz ability delay -1
 INSERT INTO `augments` VALUES (332, 0, 175, 1, 0, 0); -- Sklchn.dmg.+1%
-INSERT INTO `augments` VALUES (333, 0, 0, 0, 0, 0); -- Conserve TP+1
+INSERT INTO `augments` VALUES (333, 0, 944, 1, 0, 0); -- Conserve TP+1
 INSERT INTO `augments` VALUES (334, 0, 487, 1, 0, 0); -- Magic burst dmg.+1%
 INSERT INTO `augments` VALUES (335, 0, 542, 1, 0, 0); -- Mag. crit. hit dmg.+1%
 INSERT INTO `augments` VALUES (336, 0, 0, 0, 0, 0); -- Sic and Ready ability delay -1
-INSERT INTO `augments` VALUES (337, 0, 0, 0, 0, 0); -- Song recast delay -1
+INSERT INTO `augments` VALUES (337, 0, 833, -1, 0, 0); -- Song recast delay -1
 INSERT INTO `augments` VALUES (338, 0, 0, 0, 0, 0); -- Barrage+1 (additional shots, NOT acc)
-INSERT INTO `augments` VALUES (339, 0, 0, 0, 0, 0); -- Elemental Siphon+5 (value*5) Use Multiplier field.
+INSERT INTO `augments` VALUES (339, 5, 540, 1, 0, 0); -- Elemental Siphon+5 (value*5) Use Multiplier field.
 INSERT INTO `augments` VALUES (340, 0, 0, 0, 0, 0); -- Phantom Roll ability delay -1
 INSERT INTO `augments` VALUES (341, 0, 0, 0, 0, 0); -- Repair potency+1%
 INSERT INTO `augments` VALUES (342, 0, 0, 0, 0, 0); -- Waltz TP cost -1
@@ -436,7 +436,7 @@ INSERT INTO `augments` VALUES (349, 0, 0, 0, 0, 0);
 -- End unused block
 
 INSERT INTO `augments` VALUES (350, 0, 0, 0, 0, 0); -- Occ. maximizes magic accuracy+1%
-INSERT INTO `augments` VALUES (351, 0, 0, 0, 0, 0); -- Occ. quickens spellcasting+1%
+INSERT INTO `augments` VALUES (351, 0, 909, 1, 0, 0); -- Occ. quickens spellcasting+1%
 INSERT INTO `augments` VALUES (352, 0, 0, 0, 0, 0); -- Occ. grants dmg. bonus based on TP+1%
 INSERT INTO `augments` VALUES (353, 0, 345, 50, 0, 0); -- TP Bonus +50
 INSERT INTO `augments` VALUES (354, 0, 430, 1, 0, 0);  -- Quadruple Attack+1
@@ -896,34 +896,34 @@ INSERT INTO `augments` VALUES (738, 0, 0, 0, 0, 0);
 INSERT INTO `augments` VALUES (739, 0, 0, 0, 0, 0);
 -- End unused block
 
-INSERT INTO `augments` VALUES (740, 0, 0, 0, 0, 0); -- DMG:+1    Uncertain of correct mod id or if correct type even exists.
-insert into `augments` values (741, 0, 0, 0, 0, 0); -- Dmg:+33   Needs to work in either hand, whichever one the weapon is equipped in.
-insert into `augments` values (742, 0, 0, 0, 0, 0); -- Dmg:+65   Ranged weapons use diff AugID (starts at 746) and diff ModID.
-insert into `augments` values (743, 0, 0, 0, 0, 0); -- Dmg:+97    (melee, not ranged)
-insert into `augments` values (744, 0, 0, 0, 0, 0); -- Dmg:-1    (melee, not ranged)
-insert into `augments` values (745, 0, 0, 0, 0, 0); -- Dmg:-33    (melee, not ranged)
-insert into `augments` values (746, 0, 0, 0, 0, 0); -- Dmg:+1    (ranged, not melee)
-insert into `augments` values (747, 0, 0, 0, 0, 0); -- Dmg:+33    (ranged, not melee)
-insert into `augments` values (748, 0, 0, 0, 0, 0); -- Dmg:+65    (ranged, not melee)
-insert into `augments` values (749, 0, 0, 0, 0, 0); -- Dmg:+97    (ranged, not melee)
-insert into `augments` values (750, 0, 0, 0, 0, 0); -- Dmg:-1    (ranged, not melee)
-insert into `augments` values (751, 0, 0, 0, 0, 0); -- Dmg:-33    (ranged, not melee)
-insert into `augments` values (752, 0, 0, 0, 0, 0); -- Delay:+1    (melee, not ranged)
-insert into `augments` values (753, 0, 0, 0, 0, 0); -- Delay:+33    (melee, not ranged)
-insert into `augments` values (754, 0, 0, 0, 0, 0); -- Delay:+65    (melee, not ranged)
-insert into `augments` values (755, 0, 0, 0, 0, 0); -- Delay:+97    (melee, not ranged)
-insert into `augments` values (756, 0, 0, 0, 0, 0); -- Delay:-1    (melee, not ranged)
-insert into `augments` values (757, 0, 0, 0, 0, 0); -- Delay:-33    (melee, not ranged)
-insert into `augments` values (758, 0, 0, 0, 0, 0); -- Delay:-65    (melee, not ranged)
-insert into `augments` values (759, 0, 0, 0, 0, 0); -- Delay:-97    (melee, not ranged)
-insert into `augments` values (760, 0, 0, 0, 0, 0); -- Delay:+1    (ranged, not melee)
-insert into `augments` values (761, 0, 0, 0, 0, 0); -- Delay:+33    (ranged, not melee)
-insert into `augments` values (762, 0, 0, 0, 0, 0); -- Delay:+65    (ranged, not melee)
-insert into `augments` values (763, 0, 0, 0, 0, 0); -- Delay:+97    (ranged, not melee)
-insert into `augments` values (764, 0, 0, 0, 0, 0); -- Delay:-1    (ranged, not melee)
-insert into `augments` values (765, 0, 0, 0, 0, 0); -- Delay:-33    (ranged, not melee)
-insert into `augments` values (766, 0, 0, 0, 0, 0); -- Delay:-65    (ranged, not melee)
-insert into `augments` values (767, 0, 0, 0, 0, 0); -- Delay:-97    (ranged, not melee)
+INSERT INTO `augments` VALUES (740, 0, 366, 1, 0, 0); -- DMG:+1    Uncertain of correct mod id or if correct type even exists.
+insert into `augments` values (741, 0, 366, 33, 0, 0); -- Dmg:+33   Needs to work in either hand, whichever one the weapon is equipped in.
+insert into `augments` values (742, 0, 366, 65, 0, 0); -- Dmg:+65   Ranged weapons use diff AugID (starts at 746) and diff ModID.
+insert into `augments` values (743, 0, 366, 97, 0, 0); -- Dmg:+97    (melee, not ranged)
+insert into `augments` values (744, 0, 366, -1, 0, 0); -- Dmg:-1    (melee, not ranged)
+insert into `augments` values (745, 0, 366, -33, 0, 0); -- Dmg:-33    (melee, not ranged)
+insert into `augments` values (746, 0, 376, 1, 0, 0); -- Dmg:+1    (ranged, not melee)
+insert into `augments` values (747, 0, 376, 33, 0, 0); -- Dmg:+33    (ranged, not melee)
+insert into `augments` values (748, 0, 376, 65, 0, 0); -- Dmg:+65    (ranged, not melee)
+insert into `augments` values (749, 0, 376, 97, 0, 0); -- Dmg:+97    (ranged, not melee)
+insert into `augments` values (750, 0, 376, -1, 0, 0); -- Dmg:-1    (ranged, not melee)
+insert into `augments` values (751, 0, 376, -33, 0, 0); -- Dmg:-33    (ranged, not melee)
+insert into `augments` values (752, 0, 171, 1, 0, 0); -- Delay:+1    (melee, not ranged)
+insert into `augments` values (753, 0, 171, 33, 0, 0); -- Delay:+33    (melee, not ranged)
+insert into `augments` values (754, 0, 171, 65, 0, 0); -- Delay:+65    (melee, not ranged)
+insert into `augments` values (755, 0, 171, 97, 0, 0); -- Delay:+97    (melee, not ranged)
+insert into `augments` values (756, 0, 171, -1, 0, 0); -- Delay:-1    (melee, not ranged)
+insert into `augments` values (757, 0, 171, -33, 0, 0); -- Delay:-33    (melee, not ranged)
+insert into `augments` values (758, 0, 171, -65, 0, 0); -- Delay:-65    (melee, not ranged)
+insert into `augments` values (759, 0, 171, -97, 0, 0); -- Delay:-97    (melee, not ranged)
+insert into `augments` values (760, 0, 172, 1, 0, 0); -- Delay:+1    (ranged, not melee)
+insert into `augments` values (761, 0, 172, 33, 0, 0); -- Delay:+33    (ranged, not melee)
+insert into `augments` values (762, 0, 172, 65, 0, 0); -- Delay:+65    (ranged, not melee)
+insert into `augments` values (763, 0, 172, 97, 0, 0); -- Delay:+97    (ranged, not melee)
+insert into `augments` values (764, 0, 172, -1, 0, 0); -- Delay:-1    (ranged, not melee)
+insert into `augments` values (765, 0, 172, -33, 0, 0); -- Delay:-33    (ranged, not melee)
+insert into `augments` values (766, 0, 172, -65, 0, 0); -- Delay:-65    (ranged, not melee)
+insert into `augments` values (767, 0, 172, -97, 0, 0); -- Delay:-97    (ranged, not melee)
 INSERT INTO `augments` VALUES (768, 0, 54, 1, 0, 0); -- Fire resist+1
 INSERT INTO `augments` VALUES (769, 0, 55, 1, 0, 0); -- Ice resist+1
 INSERT INTO `augments` VALUES (770, 0, 56, 1, 0, 0); -- Wind resist+1

@@ -27,4 +27,5 @@ function onMobFight(mob, target)
 end;
 
 function onMobDeath(mob, player, isKiller)
+    player:addTitle(711)
 end;

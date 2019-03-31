@@ -95,6 +95,7 @@ function onMobFight(mob)
 end;
 
 function onMobDeath(mob, player, isKiller)
+    player:addTitle(572)
 end;
 
 function onMobDespawn(mob)

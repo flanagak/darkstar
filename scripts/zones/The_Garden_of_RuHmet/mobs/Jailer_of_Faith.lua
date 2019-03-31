@@ -28,6 +28,7 @@ function onMobFight(mob)
 end
 
 function onMobDeath(mob)
+    player:addTitle(573)
 end
 
 function onMobDespawn(mob)

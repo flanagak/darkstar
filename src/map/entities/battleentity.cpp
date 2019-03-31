@@ -247,7 +247,7 @@ int16 CBattleEntity::GetWeaponDelay(bool tp)
         return 1700;
     }
     uint16 MinimumDelay = m_Weapons[SLOT_MAIN]->getDelay(); // Track base delay.  We will need this later.  Mod::DELAY is ignored for now.
-    uint16 WeaponDelay = m_Weapons[SLOT_MAIN]->getDelay() - getMod(Mod::DELAY);
+    uint16 WeaponDelay = m_Weapons[SLOT_MAIN]->getDelay() + getMod(Mod::DELAY) * 1000 / 60;
     if (m_Weapons[SLOT_MAIN]->isHandToHand())
     {
         WeaponDelay -= getMod(Mod::MARTIAL_ARTS) * 1000 / 60;
@@ -808,6 +808,10 @@ void CBattleEntity::addEquipModifiers(std::vector<CModifier> *modList, uint8 ite
                 {
                     m_modStat[Mod::SUB_DMG_RANK] += modList->at(i).getModAmount();
                 }
+                else if (modList->at(i).getModID() == Mod::MAIN_DMG_RATING)
+                {
+                    m_modStat[Mod::SUB_DMG_RATING] += modList->at(i).getModAmount();
+                }
                 else
                 {
                     m_modStat[modList->at(i).getModID()] += modList->at(i).getModAmount();
@@ -947,6 +951,10 @@ void CBattleEntity::delEquipModifiers(std::vector<CModifier> *modList, uint8 ite
                 if (modList->at(i).getModID() == Mod::MAIN_DMG_RANK)
                 {
                     m_modStat[Mod::SUB_DMG_RANK] -= modList->at(i).getModAmount();
+                }
+                else if (modList->at(i).getModID() == Mod::MAIN_DMG_RATING)
+                {
+                    m_modStat[Mod::SUB_DMG_RATING] -= modList->at(i).getModAmount();
                 }
                 else
                 {

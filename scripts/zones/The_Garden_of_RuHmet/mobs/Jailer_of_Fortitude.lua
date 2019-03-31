@@ -61,6 +61,7 @@ function onMobDeath(mob, player, isKiller)
     -- Despawn the pets if alive
     DespawnMob(ID.mob.KFGHRAH_WHM);
     DespawnMob(ID.mob.KFGHRAH_BLM);
+    player:addTitle(574)
 end;
 
 function onMobDespawn(mob)

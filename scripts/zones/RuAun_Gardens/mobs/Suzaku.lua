@@ -34,4 +34,5 @@ end
 
 function onMobDeath(mob, player, isKiller)
     player:showText(mob, ID.text.SKY_GOD_OFFSET + 8)
+    player:addTitle(569)
 end
